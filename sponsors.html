@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="main/favicon.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors - Travis Media</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #008080;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        .window {
+            background: #d4d0c8;
+            border: 2px solid #808080;
+            box-shadow: 4px 4px 0px #404040;
+            padding: 15px;
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .title-bar {
+            background: linear-gradient(to right, #000080, #1e90ff);
+            color: white;
+            padding: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+        .content {
+            padding: 10px;
+            font-size: 14px;
+        }
+        .sponsor {
+            background: #ffffff;
+            border: 2px solid #808080;
+            padding: 10px;
+            margin-top: 10px;
+            box-shadow: 2px 2px 0px #404040;
+            text-align: center;
+        }
+        .sponsor img {
+            max-width: 150px;
+            border: 2px solid #808080;
+            margin-bottom: 10px;
+        }
+        .sponsor h2 {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000080;
+        }
+        .sponsor p {
+            font-size: 14px;
+            color: black;
+        }
+        .button {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #c0c0c0;
+            border: 2px solid #808080;
+            box-shadow: 2px 2px 0px #404040;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background: #a0a0a0;
+        }
+        .footer {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 12px;
+            background: #000080;
+            color: white;
+            text-align: center;
+            border-top: 2px solid #808080;
+        }
+        nav {
+            text-align: center;
+            padding: 5px;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            background: #c0c0c0;
+            border: 2px solid #808080;
+            box-shadow: 2px 2px 0px #404040;
+            margin: 2px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #a0a0a0;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sponsors = [
+                {
+                    logo: "main/sponsor1-logo.png",
+                    name: "PC Gamers",
+                    description: "PC Gamers is a dynamic Discord server for passionate gamers to connect, chat, and share their love for PC gaming. Join us for game discussions, tech talk, and find teammates in a fun, supportive community! CLICK BELOW TO JOIN THE DISCORD.",
+                    link: "https://discord.gg/6Xqj3C2dRp"
+                },
+                {
+                    logo: "sponsor2-logo.png",
+                    name: "N/A",
+                    description: "N/A",
+                    link: "siteplacehold"
+                }
+            ];
+
+            const container = document.getElementById("sponsor-list");
+            sponsors.forEach(sponsor => {
+                const sponsorDiv = document.createElement("div");
+                sponsorDiv.classList.add("sponsor");
+                sponsorDiv.innerHTML = `
+                    <img src="${sponsor.logo}" alt="${sponsor.name}">
+                    <h2>${sponsor.name}</h2>
+                    <p>${sponsor.description}</p>
+                    <a href="${sponsor.link}" target="_blank" class="button">Visit Website</a>
+                `;
+                container.appendChild(sponsorDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">🌐 Travis Media Sponsors</div>
+        <div class="content">
+            <h2>Our Valued Sponsors</h2>
+            <p>We proudly work alongside incredible individuals we love, who help us make a meaningful difference.</p>
+            <nav>
+                <a href="index.html">🏠 Home</a>
+                <a href="technews.html">📰 Tech News</a>
+                <a href="youtube.html">📺 YouTube</a>
+                <a href="contact.html">📧 Contact</a>
+                <a href="sponsors.html">💰 Sponsors</a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="window">
+        <div class="title-bar">🏆 Featured Sponsors</div>
+        <div class="content" id="sponsor-list"></div>
+    </div>
+
+    <div class="footer">&copy; 2025 Travis Media. All Rights Reserved.</div>
+</body>
+</html>
